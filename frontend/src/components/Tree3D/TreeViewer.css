@@ -1,0 +1,127 @@
+/* src/components/Tree3D/TreeViewer.css */
+
+.tree-viewer-container {
+  @apply relative w-1/2 max-w-none ml-auto rounded-xl overflow-hidden;
+  box-shadow: 0 8px 32px rgba(45, 80, 22, 0.15);
+  background: linear-gradient(135deg, #F5F5DC 0%, #A8D8A8 100%);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.tree-viewer {
+  @apply relative w-full rounded-xl overflow-hidden cursor-grab;
+  height: 70vh;
+}
+
+.tree-viewer:active {
+  @apply cursor-grabbing;
+}
+
+.tree-viewer canvas {
+  @apply block w-full h-full rounded-xl;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  @apply absolute inset-0 flex flex-col items-center justify-center z-10 rounded-xl;
+  background: rgba(245, 245, 220, 0.9);
+ 
+}
+
+.loading-spinner {
+  @apply w-10 h-10 rounded-full mb-4;
+  border: 4px solid #A8D8A8;
+  border-top: 4px solid #2D5016;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-overlay p {
+  @apply text-green-700 font-medium m-0;
+  color: #4A7C59;
+}
+
+/* Error Overlay */
+.error-overlay {
+  @apply absolute top-2.5 right-2.5 text-white px-4 py-2.5 rounded-lg text-sm z-10 max-w-48;
+  background: rgba(220, 53, 69, 0.9);
+}
+
+.error-overlay small {
+  @apply block mt-1 opacity-80;
+}
+
+/* Viewer Controls */
+.viewer-controls {
+  @apply px-4 py-2.5 text-center text-sm;
+  background: rgba(45, 80, 22, 0.8);
+  color: #F5F5DC;
+}
+
+.viewer-controls small {
+  @apply opacity-90;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tree-viewer-container {
+    @apply w-full mx-2.5;
+  }
+  
+  .tree-viewer {
+    height: 50vh;
+  }
+  
+  .viewer-controls {
+    @apply px-3 py-2 text-xs;
+  }
+}
+
+@media (max-width: 480px) {
+  .tree-viewer {
+    height: 40vh;
+  }
+  
+  .loading-overlay p {
+    @apply text-sm;
+  }
+  
+  .viewer-controls {
+    @apply px-2.5 py-1.5;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    @apply opacity-0;
+    transform: translateY(30px);
+  }
+  to {
+    @apply opacity-100;
+    transform: translateY(0);
+  }
+}
+
+/* Focus and accessibility */
+.tree-viewer:focus {
+  @apply outline-2 outline-offset-2;
+  outline: 3px solid #4A7C59;
+}
+
+/* Custom scrollbar */
+.tree-viewer-container::-webkit-scrollbar {
+  @apply w-1;
+}
+
+.tree-viewer-container::-webkit-scrollbar-track {
+  background: #A8D8A8;
+}
+
+.tree-viewer-container::-webkit-scrollbar-thumb {
+  @apply rounded-sm;
+  background: #2D5016;
+}

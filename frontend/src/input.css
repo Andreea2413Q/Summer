@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+    --bll:#274575;
+    --yell:#ffffff;
+}
+
+body{
+    background-color: rgb(40, 29, 66);
+}

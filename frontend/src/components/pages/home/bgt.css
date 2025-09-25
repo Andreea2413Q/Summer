@@ -1,0 +1,107 @@
+.containerwithbg {
+    min-height: 150vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Content overlay pentru tot conținutul */
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    pointer-events: none;
+}
+
+.content-overlay * {
+    pointer-events: auto;
+}
+
+/* Blur-ul să fie sub content dar peste divurile animate */
+.containerwithbg::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
+    z-index: 2;
+}
+
+/* DOAR divurile animate de background - NU content-overlay */
+.containerwithbg > div:not(.content-overlay) {
+    position: absolute;
+    border-radius: 3rem;
+    animation: gradientt 4s infinite;
+    z-index: 1;
+}
+
+@keyframes gradientt {
+    50% {
+       transform: scale(1.3) translate(100px);
+    }
+}
+
+/* Animațiile pentru divurile de background */
+.containerwithbg > div:nth-child(1) {
+   height: 100%;
+   width: 100%;
+   background-color: #bca720;
+}
+
+.containerwithbg > div:nth-child(2) {
+   height: 80%;
+   width: 70%;
+   background-color: #280990;
+   top: -12%;
+   animation-delay: 2s;
+   right: -12%;
+}
+
+.containerwithbg > div:nth-child(3) {
+   height: 50%;
+   width: 70%;
+   background-color: #b91010;
+   bottom: -10%;
+   left: -5%;
+   animation-delay: 1s;
+}
+
+.containerwithbg > div:nth-child(4) {
+   height: 65%;
+   width: 80%;
+   background-color: #d51733;
+   bottom: -15%;
+   right: 20%;
+   animation-delay: 3s;
+}
+
+.containerwithbg > div:nth-child(5) {
+   height: 80%;
+   width: 65%;
+   background-color: #da7313;
+   bottom: 0;
+   right: -50%;
+   animation-delay: 1s;
+}
+
+/* Asigură-te că conținutul din content-overlay nu se animează */
+.content-overlay div {
+    animation: none !important;
+    position: relative !important;
+}
+
+/* Specificity pentru imaginea copacului */
+.content-overlay img {
+    animation: none !important;
+    transform: none !important;
+}
