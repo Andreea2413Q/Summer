@@ -16,7 +16,7 @@ export default function Test() {
             <div className="content-overlay">
                 <div className="w-full flex items-center justify-center">
                     <div className='w-1/2 flex text-6xl justify-center items-center relative'>
-                        <h1 className="text-white w-full mx-auto text-center text-4xl">
+                        <h1 className="text-white w-full mx-auto text-center text-2xl">
                             Every minute, we lose 40 football fields worth of forest—that's
                             10 million hectares vanishing each year. In the time it takes you to read this introduction, another ancient tree has fallen,
                             silencing centuries of growth in seconds.

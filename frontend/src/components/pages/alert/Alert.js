@@ -1,10 +1,9 @@
-import React from 'react';
+
 
 const Home = () => {
   return (
-    <div className="page-container">
-      <h1>🏠 Home</h1>
-      <p>Welcome to Forest Guardian - protecting our planet's forests together.</p>
+    <div className="w-4/5 mx-auto ">
+     
       <div className="stats-grid">
         <div className="stat-card">
           <h3>Trees Saved</h3>

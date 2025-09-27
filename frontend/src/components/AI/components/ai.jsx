@@ -311,7 +311,7 @@ const ForestChatbot = ({ userLocation }) => {
   };
 
   return (
-    <div className="flex flex-col h-screen w-screen bg-gradient-to-br from-green-50 to-blue-50">
+    <div className="flex flex-col h-screen w-screen bg-gradient-to-br from-green-500 to-blue-50">
       {/* Enhanced Header */}
       <div className="bg-gradient-to-r from-green-600 via-green-700 to-emerald-800 text-white p-4 shadow-xl">
         <div className="flex items-center justify-between">
@@ -380,7 +380,7 @@ const ForestChatbot = ({ userLocation }) => {
                   <Key className="h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">🚀 Unlock AI-Powered Forest Intelligence</h3>
+                 
                   <p className="text-sm opacity-90">Connect your Groq API key for advanced location-aware capabilities</p>
                 </div>
               </div>
@@ -429,7 +429,12 @@ const ForestChatbot = ({ userLocation }) => {
                     <CheckCircle className="h-5 w-5" />
                     <span className="font-medium">✅ Connected Successfully!</span>
                   </div>
-                )}
+                  )}
+                  <p className="text-xs text-white/80">
+                    💡 <strong>Get your free API key:</strong> Visit <a href="https://console.groq.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">console.groq.com</a> to create an account and generate your API key.
+                  </p>
+               
+               
               </div>
               
               <div className="space-y-3">
@@ -457,11 +462,7 @@ const ForestChatbot = ({ userLocation }) => {
                   </li>
                 </ul>
                 
-                <div className="mt-4 p-3 bg-white/10 rounded-lg">
-                  <p className="text-xs text-white/80">
-                    💡 <strong>Get your free API key:</strong> Visit <a href="https://console.groq.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">console.groq.com</a> to create an account and generate your API key.
-                  </p>
-                </div>
+                
               </div>
             </div>
           </div>

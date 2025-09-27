@@ -15,11 +15,11 @@ const ToggleButtons = ({
       
       <button
         onClick={() => setShowLocationPanel(!showLocationPanel)}
-        className="bg-white hover:bg-gray-100 border border-gray-300 rounded-lg p-2 shadow-lg transition-all duration-300 group"
+        className="bg-gray-300 hover:bg-gray-100 border border-gray-300 rounded-lg p-2 shadow-lg transition-all duration-300 group"
         title={showLocationPanel ? "Hide Location Panel" : "Show Location Panel"}
       >
         <div className="flex items-center space-x-1">
-          <span className="text-sm">📍</span>
+          <span className="text-sm">🌍</span>
           <span className={`text-xs font-medium transition-all duration-200 ${showLocationPanel ? 'text-blue-600' : 'text-gray-600'}`}>
             {showLocationPanel ? 'Hide' : 'Show'}
           </span>
@@ -38,11 +38,7 @@ const ToggleButtons = ({
           </span>
         </div>
       </button>
-      <button
-   
-        className="bg-white hover:bg-gray-100 border border-gray-300 rounded-lg p-2 shadow-lg transition-all duration-300 group"
-        
-      >Tester   Welcome, {user?.name}!</button>
+      
     </div>
   );
 };

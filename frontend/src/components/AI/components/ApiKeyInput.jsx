@@ -256,7 +256,7 @@ const ForestChatbot = ({ userLocation }) => {
               <Trees className="h-7 w-7" />
             </div>
             <div>
-              <h1 className="text-xl font-bold">EcoForest AI</h1>
+              <h1 className="text-xl font-bold text-green-600">EcoForest AI</h1>
               <p className="text-sm opacity-90 flex items-center">
                 <span className={`w-2 h-2 rounded-full mr-2 ${isConnected ? 'bg-green-300 animate-pulse' : 'bg-yellow-300'}`}></span>
                 {isConnected ? (

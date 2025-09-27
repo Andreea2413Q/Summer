@@ -61,7 +61,7 @@ const NavigationBar = () => {
                 alt="Tree Lives Matter Logo" 
                 className="h-12 w-12 object-contain transition-transform hover:scale-110 duration-300" 
               />
-              <span className="ml-3 text-xl font-bold text-yellow-400 hidden sm:block">
+              <span className="ml-3 text-2xl font-bold text-yellow-400 hidden sm:block">
                 Tree Lives Matter
               </span>
             </Link>
